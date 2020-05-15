@@ -238,7 +238,7 @@ pushd "$lib_dir"
 			if contains "$*" clean; then make clean; fi
 
 			./build.sh
-			sudo make install
+			cd build && sudo cmake --build . --target install
 		popd
 	fi
 
